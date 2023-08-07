@@ -1,4 +1,78 @@
-:root {}
+:root {
+  --text-color: #69707d;
+  --text-color-dark: #1d2026;
+  --accent-color: #ff7e1b;
+  --accent-color-hover: #ffab6a;
+  --accent-color-light: #ffeee2;
+  --light-bg: #f6f8fd;
+
+  --fonta-family: "Kumbh Sans", "Arial", sans-serif;
+}
+
+/* FONT-FACE */
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../fonts/kumbh-sans-v20-latin-100.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/kumbh-sans-v20-latin-200.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/kumbh-sans-v20-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/kumbh-sans-v20-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/kumbh-sans-v20-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/kumbh-sans-v20-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/kumbh-sans-v20-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap; 
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/kumbh-sans-v20-latin-900.woff2') format('woff2'); 
+}
 
 /* GLOBAL */
 html {
@@ -19,11 +93,11 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: var(--fonta-family);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 26px;
   background-color: #fff;
-  color: #222;
+  color: var(--text-color);
 }
 
 img {
@@ -70,9 +144,9 @@ select:-webkit-autofill:focus {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1148px;
+  padding-left: 24px;
+  padding-right: 24px;
   margin-left: auto;
   margin-right: auto;
 }
