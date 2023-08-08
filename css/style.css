@@ -172,7 +172,6 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 
-
 /* SITENAV */
 .sitenav__list {
   display: flex;
@@ -227,4 +226,37 @@ select:-webkit-autofill:focus {
 
 .site-header__sitenav {
   margin-right: auto;
+}
+
+.site-header__cart-link {
+  position: relative;
+  display: flex;
+  color: var(--text-color);
+}
+
+.site-header__cart-link:hover {
+  color: var(--text-color-dark);
+}
+
+.site-header__cart-link:active {
+  opacity: 0.6;
+}
+
+.site-header__cart-count {
+  position: absolute;
+  left: calc(100% - 13px);
+  top: -6px;
+  padding: 1px 6px;
+  border-radius: 7px;
+  font-size: 10px;
+  line-height: normal;
+  font-weight: bold;
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.site-header__cart-icon {
+  width: 22px;
+  height: 20px;
+  object-fit: contain;
 }
