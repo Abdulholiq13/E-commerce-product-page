@@ -5,6 +5,7 @@
   --accent-color-hover: #ffab6a;
   --accent-color-light: #ffeee2;
   --light-bg: #f6f8fd;
+  --devider-bg: #e4e9f2;
 
   --fonta-family: "Kumbh Sans", "Arial", sans-serif;
 }
@@ -12,66 +13,66 @@
 /* FONT-FACE */
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 100;
-  src: url('../fonts/kumbh-sans-v20-latin-100.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-100.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap; 
-  font-family: 'Kumbh Sans';
+  font-display: swap;
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 200;
-  src: url('../fonts/kumbh-sans-v20-latin-200.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-200.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/kumbh-sans-v20-latin-300.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-300.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/kumbh-sans-v20-latin-regular.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/kumbh-sans-v20-latin-500.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-500.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/kumbh-sans-v20-latin-600.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-600.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: 'Kumbh Sans';
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/kumbh-sans-v20-latin-700.woff2') format('woff2');
+  src: url("../fonts/kumbh-sans-v20-latin-700.woff2") format("woff2");
 }
 
 @font-face {
-  font-display: swap; 
-  font-family: 'Kumbh Sans';
+  font-display: swap;
+  font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 900;
-  src: url('../fonts/kumbh-sans-v20-latin-900.woff2') format('woff2'); 
+  src: url("../fonts/kumbh-sans-v20-latin-900.woff2") format("woff2");
 }
 
 /* GLOBAL */
@@ -141,6 +142,26 @@ select:-webkit-autofill:focus {
   overflow: hidden;
 }
 
+/* LOGO */
+.logo {
+  display: inline-block;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo:active {
+  opacity: 0.6;
+}
+
+.logo__img {
+  display: block;
+  width: 137px;
+  height: 20px;
+  object-fit: contain;
+}
+
 /* CONTAINER */
 .container {
   width: 100%;
@@ -151,7 +172,57 @@ select:-webkit-autofill:focus {
   margin-right: auto;
 }
 
-/* MAIN-CONTENT */
-.main-content {
-  flex-grow: 1;
+/* SITE-HEADER */
+.site-header {
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--devider-bg);
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  margin-right: 56px;
+}
+
+/* SITENAV */
+.sitenav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.sitenav__item {
+  position: relative;
+  padding-top: 41px;
+  padding-bottom: 45px;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.sitenav__link {
+  display: block;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.sitenav__link:hover {
+  color: var(--text-color-dark);
+}
+
+.sitenav__link:hover::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  content: "";
 }
