@@ -378,6 +378,99 @@ select:-webkit-autofill:focus {
   margin-bottom: 24px;
 }
 
+/* IMG SHOWCASE */
+.img-showcase__showcase {
+  margin-bottom: 32px;
+}
+
+.img-showcase__active-img {
+  display: block;
+  width: 445px;
+  height: 445px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.img-showcase__thumbnails {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 10px;
+  list-style-type: none;
+  overflow: auto;
+  scrollbar-color: var(--accent-color) var(--devider-bg);
+}
+
+.img-showcase__thumbnails::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.img-showcase__thumbnails::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--accent-color);
+}
+
+.img-showcase__thumbnails::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: var(--devider-bg);
+}
+
+
+
+.img-showcase__thumbnail {
+  flex-shrink: 0;
+}
+
+.img-showcase__thumbnail:not(:last-child) {
+  margin-right: 31px;
+}
+
+.img-showcase__thumbnail-button {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-showcase__thumbnail-button::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  content: "";
+  opacity: 0;
+}
+
+.img-showcase__thumbnail-button:hover::after {
+  opacity: 1;
+}
+
+.img-showcase__thumbnail-button:active {
+  opacity: 0.6;
+}
+
+.img-showcase__thumbnail--active .img-showcase__thumbnail-button::after {
+  border: 2px solid var(--accent-color);
+  background-color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.img-showcase__thumbnail-img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 /* SITE-HEADER */
 .site-header__container {
   position: relative;
@@ -469,4 +562,28 @@ select:-webkit-autofill:focus {
   top: 94px;
   display: block;
   width: 360px;
+}
+
+/* PRODUCT-PAGE */
+.product-page {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.product-page__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1063px;
+}
+
+.product-page__gallery {
+  width: 100%;
+  max-width: 445px;
+  margin-right: 48px;
+}
+
+.product-page__info {
+  width: 100%;
+  max-width: 445px;
 }
