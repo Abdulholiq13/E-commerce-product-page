@@ -1,5 +1,7 @@
 const modifier = {
+  siteHeaderCartModalopen: "site-header__cart-modal--open",
   imgThumbnailActive: "img-showcase__thumbnail--active",
+  lightBoxOpen: "lightbox--open",
 };
 
 // Shopping cart modal
@@ -14,7 +16,7 @@ if (elSiteHeaderCartLink) {
   elSiteHeaderCartLink.addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    elSiteHeaderCartModal.classList.toggle("site-header__cart-modal--open");
+    elSiteHeaderCartModal.classList.toggle(modifier.siteHeaderCartModalopen);
   });
 }
 
@@ -39,3 +41,20 @@ elsImgShowcaseThumbnailButton.forEach(function (elButton) {
     elImgShowcaseActiveImg.srcset = `${elButton.dataset.imgShowcaseBig} 1x, ${elButton.dataset.imgShowcaseRetina}`;
   });
 });
+
+// LIGHTBOX
+const elLightBox = document.querySelector(".lightbox");
+const elLightboxToggler = document.querySelector(".js-lightbox-toggler");
+const elLightBoxClose = document.querySelector(".js-lightbox-close");
+
+if (elLightboxToggler) {
+  elLightboxToggler.addEventListener("click", function () {
+    elLightBox.classList.add(modifier.lightBoxOpen);
+  });
+}
+
+if (elLightBoxClose) {
+  elLightBoxClose.addEventListener("click", function () {
+    elLightBox.classList.remove(modifier.lightBoxOpen);
+  });
+}
